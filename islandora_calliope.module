@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * This module allows communication between Calliope and Islandora.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function islandora_calliope_menu() {
+  $items = array();
+  $items['admin/islandora/calliope'] = array(
+    'title' => 'Islandora Calliope',
+    'description' => "Configure Calliope for MVD's.",
+    'page callback' => 'drupal_get_form',
+    'access arguments' => array('administer site configuration'),
+    'page arguments' => array('islandora_calliope_admin'),
+    'file' => 'includes/admin.form.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}

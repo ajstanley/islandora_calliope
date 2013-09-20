@@ -1,0 +1,5 @@
+name = Islandora Calliope Integration
+description = Allowd communication between Islandora and Calliope.
+dependencies[] = islandora
+package = Islandora
+core = 7.x
